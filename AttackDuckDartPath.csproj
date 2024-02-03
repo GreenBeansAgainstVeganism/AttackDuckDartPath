@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net4.8</TargetFramework>
+        <RootNamespace>AttackDuckDartPath</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>AttackDuckDartPath</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Upgrades\SnareDisplay.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include=".github\workflows\build.yml" />
+    </ItemGroup>
+  
+    <Import Project="..\btd6.targets" />
+  <ItemGroup>
+    <Reference Include="PathsPlusPlus">
+      <HintPath>$(BloonsTD6)\Mods\PathsPlusPlus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Displays\Towers\" />
+  </ItemGroup>
+
+</Project>
